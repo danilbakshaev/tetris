@@ -157,7 +157,7 @@ export default class Game {
           blocks[i][j] = blocks[y - j][i];
           blocks[y - j][i] = blocks[y - i][y - j];
           blocks[y - i][y - j] = blocks[j][y - i];
-          blocks[j][y - j] = temp;
+          blocks[j][y - i] = temp;
         } else {
           blocks[i][j] = blocks[j][y - i];
           blocks[j][y - i] = blocks[y - i][y - j];
