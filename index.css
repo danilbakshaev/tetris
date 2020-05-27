@@ -1,4 +1,10 @@
+body {
+  background-color: #000;
+  color: white;
+  margin: 0;
+  text-align: center;
+}
 #root canvas {
-  border: 4px solid black;
+  margin: 0 auto;
   display: block;
 }
