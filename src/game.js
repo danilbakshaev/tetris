@@ -45,7 +45,7 @@ export default class Game {
   }
 
   reset() {
-    this.score = 999;
+    this.score = 0;
     this.lines = 0;
     this.topOut = false;
     this.playfield = this.createPlayfield();
