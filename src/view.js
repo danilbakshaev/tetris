@@ -67,7 +67,7 @@ export default class View {
 
   renderStartScreen() {
     this.context.fillStyle = 'white';
-    this.context.font = '18px "Press start 2p"';
+    this.context.font = '14px "Press start 2p"';
     this.context.textAlign = 'center';
     this.context.textBaseline = 'middle';
     this.context.fillText('Press ENTER to Start', this.width / 2, this.height / 2);
@@ -78,7 +78,7 @@ export default class View {
     this.context.fillRect(0, 0, this.width, this.height)
 
     this.context.fillStyle = 'white';
-    this.context.font = '18px "Press start 2p"';
+    this.context.font = '14px "Press start 2p"';
     this.context.textAlign = 'center';
     this.context.textBaseline = 'middle';
     this.context.fillText('Press ENTER to Resume', this.width / 2, this.height / 2);
@@ -88,7 +88,7 @@ export default class View {
     this.clearScreen();
 
     this.context.fillStyle = 'white';
-    this.context.font = '18px "Press start 2p"';
+    this.context.font = '14px "Press start 2p"';
     this.context.textAlign = 'center';
     this.context.textBaseline = 'middle';
     this.context.fillText('GAME OVER', this.width / 2, this.height / 2 - 48);
@@ -104,12 +104,12 @@ export default class View {
     this.context.textAlign = 'start';
     this.context.textBaseline = 'top';
     this.context.fillStyle = 'white';
-    this.context.font = '14px "Press Start 2P"';
+    this.context.font = '9px "Press Start 2P"';
 
     this.context.fillText(`Score: ${score}`, this.panelX, this.panelY + 0);
-    this.context.fillText(`Lines: ${lines}`, this.panelX, this.panelY + 24);
-    this.context.fillText(`Level: ${level}`, this.panelX, this.panelY + 48);
-    this.context.fillText(`Next:`,  this.panelX, this.panelY + 96);
+    this.context.fillText(`Lines: ${lines}`, this.panelX, this.panelY + 16);
+    this.context.fillText(`Level: ${level}`, this.panelX, this.panelY + 32);
+    this.context.fillText(`Next:`,  this.panelX, this.panelY + 60);
 
     for (let y = 0; y < nextPiece.blocks.length; y++) {
       for (let x = 0; x < nextPiece.blocks[y].length; x++) {
@@ -118,7 +118,7 @@ export default class View {
         if (block) {
           this.renderBlock(
             this.panelX + (x * this.blockWidth * 0.5),
-            this.panelY + 100 + (y * this.blockHeight * 0.5),
+            this.panelY + 66 + (y * this.blockHeight * 0.5),
             this.blockWidth * 0.5,
             this.blockHeight * 0.5,
             View.colors[block]
